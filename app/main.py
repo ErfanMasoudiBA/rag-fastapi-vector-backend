@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.api.routes.health import router as health_router
 from app.core.config import settings
+from app.api.routes.root import router as root_router
 
 # import the main class and make an instance of fastapi
 app = FastAPI(
@@ -12,4 +13,5 @@ app = FastAPI(
     # all of this shows in swagger and openapi schema
 )
 
+app.include_router(root_router)
 app.include_router(health_router)
