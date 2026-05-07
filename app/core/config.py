@@ -9,6 +9,10 @@ class Settings(BaseSettings):
     # these are lowercases but in .env they read in uppercase format
     # pydantic-settings do the mapping job
     
+    BASE_URL: str
+    OPENAI_API_KEY: str
+    EMBEDDING_MODEL: str = "text-embedding-3-small"
+    
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",

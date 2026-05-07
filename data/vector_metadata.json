@@ -1,0 +1,44 @@
+[
+  {
+    "text": "FastAPI is a modern web framework for building APIs.",
+    "metadata": {
+      "doc_id": "doc_1",
+      "chunk_index": 0
+    }
+  },
+  {
+    "text": "FAISS is used for efficient similarity search.",
+    "metadata": {
+      "doc_id": "doc_2",
+      "chunk_index": 0
+    }
+  },
+  {
+    "text": "Transformers generate semantic embeddings for text.",
+    "metadata": {
+      "doc_id": "doc_3",
+      "chunk_index": 0
+    }
+  },
+  {
+    "text": "FastAPI is a modern web framework for building APIs.",
+    "metadata": {
+      "doc_id": "doc_1",
+      "chunk_index": 0
+    }
+  },
+  {
+    "text": "FAISS is used for efficient similarity search.",
+    "metadata": {
+      "doc_id": "doc_2",
+      "chunk_index": 0
+    }
+  },
+  {
+    "text": "Transformers generate semantic embeddings for text.",
+    "metadata": {
+      "doc_id": "doc_3",
+      "chunk_index": 0
+    }
+  }
+]
