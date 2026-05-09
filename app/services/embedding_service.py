@@ -1,10 +1,11 @@
 from openai import OpenAI
 from app.core.config import settings
 from typing import List
+from app.core.ai_client import get_openai_client
 
 class EmbeddingService:
     def __init__(self):
-        self.client = OpenAI(base_url=settings.BASE_URL, api_key=settings.OPENAI_API_KEY)
+        self.client = get_openai_client()
         self.model = settings.EMBEDDING_MODEL
         
     def generate_embeddings(self, texts: List[str]) -> list[dict]:

@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     BASE_URL: str
     OPENAI_API_KEY: str
     EMBEDDING_MODEL: str = "text-embedding-3-small"
+    GENERATION_MODEL: str
     
     model_config = SettingsConfigDict(
         env_file=".env",

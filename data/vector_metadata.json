@@ -22,5 +22,49 @@
       "chunk_index": 2,
       "source": "fastapi_docs_test"
     }
+  },
+  {
+    "text": "Python is a programming language. It is widely used in web development, data sci",
+    "metadata": {
+      "source": "manual.txt",
+      "document_id": "ec684422-e4bb-4c0c-af41-04f2f14420e8",
+      "chunk_index": 0,
+      "start_char": 0,
+      "end_char": 80,
+      "embedding_dimension": 1536
+    }
+  },
+  {
+    "text": ", data science, automation and artificial intelligence. FastAPI is a modern Pyth",
+    "metadata": {
+      "source": "manual.txt",
+      "document_id": "ec684422-e4bb-4c0c-af41-04f2f14420e8",
+      "chunk_index": 1,
+      "start_char": 70,
+      "end_char": 150,
+      "embedding_dimension": 1536
+    }
+  },
+  {
+    "text": "odern Python framework for building APIs. FAISS is a library for efficient simil",
+    "metadata": {
+      "source": "manual.txt",
+      "document_id": "ec684422-e4bb-4c0c-af41-04f2f14420e8",
+      "chunk_index": 2,
+      "start_char": 140,
+      "end_char": 220,
+      "embedding_dimension": 1536
+    }
+  },
+  {
+    "text": "ient similarity search.",
+    "metadata": {
+      "source": "manual.txt",
+      "document_id": "ec684422-e4bb-4c0c-af41-04f2f14420e8",
+      "chunk_index": 3,
+      "start_char": 210,
+      "end_char": 233,
+      "embedding_dimension": 1536
+    }
   }
 ]
