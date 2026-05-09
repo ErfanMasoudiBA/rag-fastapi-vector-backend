@@ -79,10 +79,10 @@ The answer pipeline:
 
 ```http
 POST /documents/index
-
+```
 #### Request
 
-json
+```json
 {
   "text": "Refunds are available within 14 days of purchase.",
   "metadata": {
@@ -91,34 +91,34 @@ json
   "chunk_size": 500,
   "chunk_overlap": 50
 }
-
+```
 #### Response
 
-json
+```json
 {
   "message": "Document indexed successfully",
   "total_chunks": 1,
   "total_vectors": 1
 }
-
+```
 ---
 
 ### Generate an Answer
 
-http
+```http
 POST /rag/answer
-
+```
 #### Request
 
-json
+```json
 {
   "question": "What is the refund policy?",
   "top_k": 3
 }
-
+```
 #### Response
 
-json
+```json
 {
   "question": "What is the refund policy?",
   "answer": "According to the indexed document, refunds are available within 14 days of purchase.",
@@ -132,12 +132,12 @@ json
 }
   ]
 }
-
+```
 ---
 
 ## Architecture
 
-text
+```text
 Document
    ↓
 Clean & Chunk
@@ -158,7 +158,7 @@ Retrieve Relevant Chunks
 Build Context-Aware Prompt
    ↓
 Generate Grounded Answer
-
+```
 ---
 
 ## Main Components
@@ -225,19 +225,19 @@ This helps with debugging, validation, source display, and future citation suppo
 
 ## Environment Variables
 
-env
+```env
 BASE_URL=https://your-provider-url/v1
 OPENAI_API_KEY=your_api_key
 EMBEDDING_MODEL=text-embedding-3-small
 CHAT_MODEL=gpt-4o-mini
-
+```
 Model names can be adjusted depending on the selected provider.
 
 ---
 
 ## Running Locally
 
-bash
+```bash
 git clone <your-repo-url>
 cd <your-project>
 
@@ -247,12 +247,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 uvicorn app.main:app --reload
-
+```
 API documentation will be available at:
 
-text
+```text
 http://127.0.0.1:8000/docs
-
+```
 ---
 
 ## Development Notes
@@ -260,15 +260,15 @@ http://127.0.0.1:8000/docs
 When changing the embedding model, the vector dimension may also change.
 If an existing FAISS index was created with a different dimension, you may see an error like:
 
-text
+```text
 Embedding dimension mismatch. Expected X, got Y
-
+```
 To fix this during development, remove the old vector store files and re-index documents:
 
-bash
+```bash
 data/vector.index
 data/vector_metadata.json
-
+```
 ---
 
 ## Challenges Solved
