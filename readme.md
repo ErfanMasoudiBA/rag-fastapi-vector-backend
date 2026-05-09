@@ -1,4 +1,4 @@
-# AI RAG Backend
+# RAG FastAPI Vector Backend
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
@@ -223,11 +223,9 @@ This helps with debugging, validation, source display, and future citation suppo
 
 ---
 
-## Environment Variables
+## Environment Variables (models)
 
 ```env
-BASE_URL=https://your-provider-url/v1
-OPENAI_API_KEY=your_api_key
 EMBEDDING_MODEL=text-embedding-3-small
 CHAT_MODEL=gpt-4o-mini
 ```
@@ -238,8 +236,8 @@ Model names can be adjusted depending on the selected provider.
 ## Running Locally
 
 ```bash
-git clone <your-repo-url>
-cd <your-project>
+git clone https://github.com/ErfanMasoudiBA/rag-fastapi-vector-backend.git
+cd rag-fastapi-vector-backend
 
 python -m venv venv
 source venv/bin/activate
