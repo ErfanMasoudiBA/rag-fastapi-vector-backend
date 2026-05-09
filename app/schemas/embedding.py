@@ -11,7 +11,8 @@ class EmbeddingItemResponse(BaseModel):
     # the number of each chunk in input list
     index: int
     text: str
-    EmbeddingResponse: int
+    vector: List[float]
+    embedding_dimension: int
 
 # this is the schema of the last endpoint
 class EmbeddingResponse(BaseModel):
