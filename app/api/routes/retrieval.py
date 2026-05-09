@@ -1,17 +1,15 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 from app.schemas.retrieval import RetrievalRequest, RetrievalResponse
-from app.services.retrieval_service import retrieval_service
+from app.services.retrieval_service import RetrievalService
 
 router = APIRouter(prefix="/retrieval", tags=["Retrieval"])
 
+retrieval_service = RetrievalService()
+
+
 @router.post("/search", response_model=RetrievalResponse)
-def retrieve_chunks(request: RetrievalRequest):
-    try:
-        return retrieval_service.retrieve(
-            query=request.query,
-            top_k=request.top_k
-        )
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Retrieval failed: {str(e)}")
+def retrieve(request: RetrievalRequest):
+    return retrieval_service.retrieve(
+        query=request.query,
+        top_k=request.top_k
+    )

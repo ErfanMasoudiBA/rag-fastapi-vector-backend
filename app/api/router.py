@@ -7,7 +7,7 @@ from app.api.routes import docs, ingestion
 from app.api.routes.ingestion import router as ingestion_router
 from app.api.routes.vector_store import router as vector_store_router
 from app.api.routes.embedding import router as embedding_router
-
+from app.api.routes.retrieval import router as retrieval_router
 
 api_router = APIRouter()
 # this router plays the role of router aggregator
@@ -21,3 +21,4 @@ api_router.include_router(ingestion.router)
 api_router.include_router(ingestion_router)
 api_router.include_router(vector_store_router)
 api_router.include_router(embedding_router)
+api_router.include_router(retrieval_router)
