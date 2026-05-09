@@ -320,6 +320,3 @@ It includes document processing, embedding generation, vector search, retrieval 
 A concise professional description:
 
 > Built a modular RAG backend with FastAPI, FAISS, and OpenAI-compatible models to enable document ingestion, semantic search, and grounded question answering over private knowledge sources.
-
----
-```
